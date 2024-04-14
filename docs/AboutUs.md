@@ -16,8 +16,9 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](https://github.com/kjw142857)]
 [[portfolio](https://github.com/kjw142857)]
 
-* Role: Developer
-* Responsibilities: TBC
+* Role: Developer for basic loan implementation + debugging and testing.
+* Responsibilities: Implementing the `linkloan` and `editloan` commands;
+finding bugs and pushing fixes; writing test code.
 
 ### Kyal Sin Min Thet
 
@@ -26,8 +27,9 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](http://github.com/marcus-ny)]
 [[portfolio](http://github.com/marcus-ny)]
 
-* Role: Developer
-* Responsibilities: TBC
+* Role: Team Lead + Frontend.
+* Responsibilities: setting up repo + CI workflow;
+Implementing view options for different panels - loans, contacts, analytics dashboards.
 
 ### Teoh Tze Tzun
 
@@ -35,8 +37,10 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 [[github](https://github.com/Joseph31416)] [[portfolio](https://github.com/Joseph31416)]
 
-* Role: Developer
-* Responsibilities: Data
+* Role: Developer for data classes and UG documentation.
+* Responsibilities:
+Implementing the `Loan`, `LoanRecords` (now refactored as `UniqueLoanList`) and `Analytics` classes from scratch;
+writing the user guide.
 
 ### Wang Junwu
 
@@ -45,8 +49,10 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](http://github.com/narwhalsilent)]
 [[portfolio](http://github.com/narwhalsilent)]
 
-* Role: Developer
-* Responsibilities: TBC
+* Role: Developer for loan architecture and UI integration + DG documentation.
+* Responsibilities: Implementing loan architecture as `UniqueLoanList` in the `Model`;
+implementing the `viewloan` command;
+writing the developer guide.
 
 ### Zhang Xiaorui
 
@@ -55,5 +61,5 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](https://github.com/xiaorui-ui)]
 [[portfolio](https://github.com/xiaorui-ui)]
 
-* Role: Developer
-* Responsibilities: TBC
+* Role: Developer for basic loan management and DG documentation.
+* Responsibilities: Implementing `deleteloan`, `markloan`, and `unmarkloan` commands; writing the developer guide.

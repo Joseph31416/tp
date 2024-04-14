@@ -14,7 +14,7 @@ end box
 [-> AnalyticsCommand : execute(model)
 activate AnalyticsCommand
 
-AnalyticsCommand -> Analytics : getAnalytics(LoanRecords)
+AnalyticsCommand -> Analytics : getAnalytics(ObservableList<Loan>)
 activate Analytics
 
 loop LoanRecords.size() times

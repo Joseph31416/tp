@@ -39,7 +39,7 @@ title: User Guide
 ## Introduction
 
 LoanGuardPro is a desktop app for managing contacts, optimized for use via a Command Line Interface (CLI) while still
-having the benefits of a Graphical User Interface (GUI). 
+having the benefits of a Graphical User Interface (GUI).
 If you are a moneylender looking to **keep track of your clients' contacts and loans**, LoanGuardPro is the right tool for you.
 
 It is in the form of an address book and supports basic contact and loan handling features like adding, editing, deleting, and viewing contacts and loans.
@@ -120,40 +120,40 @@ There are three main categories of commands: Contact Management, Basic Loan Mana
 
 ### Contact Management
 
- Action     | Format, Examples                                                                                                                                                      
-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
- **Add**    | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague` 
- **Clear**  | `clear`                                                                                                                                                               
- **Delete** | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                   
- **Edit**   | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`                                           
- **Find**   | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`                                                                                                            
- **List**   | `list`          
+| Action     | Format, Examples                                                                                                                                                      |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Add**    | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague` |
+| **Clear**  | `clear`                                                                                                                                                               |
+| **Delete** | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                   |
+| **Edit**   | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`                                           |
+| **Find**   | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`                                                                                                            |
+| **List**   | `list`                                                                                                                                                                |
 
 ### Basic Loan Management
 
- Action          | Format, Examples                                                                                              
------------------|---------------------------------------------------------------------------------------------------------------
- **Link Loan**   | `linkloan INDEX v/VALUE s/START_DATE r/RETURN_DATE`<br> e.g., `linkloan 1 v/500.00 s/2024-02-15 r/2025-02-15` 
- **View Loan**   | `viewloan [FLAG] [INDEX]`<br> e.g., `viewloan 1`, `viewloan -a 1`
- **Mark Loan**   | `markloan INDEX`<br> e.g., `markloan 1`
- **Unmark Loan** | `unmarkloan INDEX`<br> e.g., `unmarkloan 1`            
- **Edit Loan**   | `editloan INDEX [v/VALUE] [s/START_DATE] [r/RETURN_DATE]`<br> e.g., `editloan 1 v/600.00 s/2024-02-15 r/2025-02-15`                                                         
- **Delete Loan** | `deleteloan INDEX`<br> e.g., `deleteloan 1`                                                                   
+| Action          | Format, Examples                                                                                                    |
+|-----------------|---------------------------------------------------------------------------------------------------------------------|
+| **Link Loan**   | `linkloan INDEX v/VALUE s/START_DATE r/RETURN_DATE`<br> e.g., `linkloan 1 v/500.00 s/2024-02-15 r/2025-02-15`       |
+| **View Loan**   | `viewloan [FLAG] [INDEX]`<br> e.g., `viewloan 1`, `viewloan -a 1`                                                   |
+| **Mark Loan**   | `markloan INDEX`<br> e.g., `markloan 1`                                                                             |
+| **Unmark Loan** | `unmarkloan INDEX`<br> e.g., `unmarkloan 1`                                                                         |
+| **Edit Loan**   | `editloan INDEX [v/VALUE] [s/START_DATE] [r/RETURN_DATE]`<br> e.g., `editloan 1 v/600.00 s/2024-02-15 r/2025-02-15` |
+| **Delete Loan** | `deleteloan INDEX`<br> e.g., `deleteloan 1`                                                                         |
 
 ### Advanced Loan Management
 
- Action        | Format, Examples                          
----------------|-------------------------------------------
- **Analytics** | `analytics INDEX`<br> e.g., `analytics 1` 
+| Action        | Format, Examples                          |
+|---------------|-------------------------------------------|
+| **Analytics** | `analytics INDEX`<br> e.g., `analytics 1` |
 
 <div style="text-align: right"><a href="#table-of-contents">Back to top</a></div>
 
 ### Miscellaneous
 
- Action | Format
---------|-----------------
- **Exit** | `exit`
- **Help** | `help`
+| Action   | Format |
+|----------|--------|
+| **Exit** | `exit` |
+| **Help** | `help` |
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -396,7 +396,7 @@ Expected Behaviour:
 * A success message in the form of "Loan edited: [loan details]" will be shown.
 * The loan will be updated in the loan list.
 
-Examples: 
+Examples:
 
 * `editloan 1 v/600.00 s/2024-02-15 r/2025-02-15`
     * Edits the loan at the 1st position in the loan list to have a value of $600.00, a start date of 15th Feb 2024, and a
@@ -412,7 +412,7 @@ Format: `deleteloan INDEX`
 
 Parameters Restrictions:
 
-* The index refers to the index number shown in the displayed loan list. 
+* The index refers to the index number shown in the displayed loan list.
 The index **must be a positive integer** 1, 2, 3, …​, and it must not exceed the number of loans shown in the list.
 
 Expected Behaviour:
