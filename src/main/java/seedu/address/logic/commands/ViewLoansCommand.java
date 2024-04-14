@@ -9,10 +9,12 @@ import seedu.address.model.Model;
  * Lists all active loans in the address book to the user.
  */
 public class ViewLoansCommand extends ViewLoanRelatedCommand {
-    public static final String COMMAND_WORD = "viewloans";
 
     public static final String MESSAGE_SUCCESS = "Listed all loans";
 
+    /**
+     * @param isShowAllLoans Whether to show all loans or only active loans.
+     */
     public ViewLoansCommand(boolean isShowAllLoans) {
         super(isShowAllLoans);
     }
