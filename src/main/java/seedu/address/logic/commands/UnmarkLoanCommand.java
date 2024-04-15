@@ -26,8 +26,8 @@ public class UnmarkLoanCommand extends Command {
     private final Index loanIndex;
 
     /**
-     * Creates a UnmarkLoanCommand to delete the specified loan.
-     * @param loanIndex
+     * Creates a UnmarkLoanCommand to unmark the specified loan.
+     * @param loanIndex Index of the loan in the last shown loan list.
      */
     public UnmarkLoanCommand(Index loanIndex) {
         requireAllNonNull(loanIndex);
@@ -37,19 +37,18 @@ public class UnmarkLoanCommand extends Command {
     @Override
     public CommandResult execute(Model model) throws CommandException {
         List<Loan> lastShownList = model.getSortedLoanList();
+        assert lastShownList != null;
         if (loanIndex.getZeroBased() >= lastShownList.size()) {
-            // in reality, it's loan index outside of list range. We will be concerned about it later.
             throw new CommandException(String.format(MESSAGE_FAILURE_LOAN, loanIndex.getOneBased()));
         }
-        // delete specified loan number
+        // unmark specified loan number
         Loan loanToUnmark = lastShownList.get(loanIndex.getZeroBased());
         model.unmarkLoan(loanToUnmark);
         return new CommandResult(generateSuccessMessage(loanToUnmark), false, false, true);
     }
 
     /**
-     * Generates a command execution success message after loan is deleted from the
-     * {@code personToEdit}.
+     * Generates a command execution success message after loan is unmarked.
      */
     private String generateSuccessMessage(Loan markedLoan) {
         return String.format(MESSAGE_SUCCESS, markedLoan);

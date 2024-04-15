@@ -79,8 +79,11 @@ public class EditLoanCommand extends Command {
 
         Loan loanToEdit = lastShownList.get(loanIndex.getZeroBased());
         Person linkedPerson = loanToEdit.getAssignee();
+        // Generate updated details of the loan
         LinkLoanDescriptor updatedLoanDetails = generateEditedLoanDetails(loanToEdit, editedDetails);
+        // Delete the old loan
         model.deleteLoan(loanToEdit);
+        // Create and link a new loan using the updated loan details
         Loan editedLoan = model.addLoan(updatedLoanDetails, linkedPerson);
 
         return new CommandResult(generateSuccessMessage(editedLoan), false, false, true);
@@ -93,6 +96,14 @@ public class EditLoanCommand extends Command {
         return String.format(MESSAGE_SUCCESS, editedLoan);
     }
 
+    /**
+     * Generates the new loan details in the form of a LinkLoanDescriptor.
+     *
+     * @param loanToEdit The original loan that was edited.
+     * @param editedDetails The details of the loan that were changed.
+     * @return All details of the new loan, including the changed and unchanged details.
+     * @throws CommandException If the edited date(s) are invalid.
+     */
     private LinkLoanDescriptor generateEditedLoanDetails(Loan loanToEdit, EditLoanDescriptor editedDetails)
             throws CommandException {
         BigDecimal newValue = editedDetails.getValue().orElse(loanToEdit.getValue());
