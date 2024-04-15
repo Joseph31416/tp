@@ -45,7 +45,8 @@ title: Developer Guide
 - [7.10 Exiting the app](#exiting-the-app)<br>
 
 [8. Appendix: Effort](#appendix-effort)<br>
-[9. Glossary](#glossary)<br>
+[9. Appendix: Planned Enhancements](#appendix-planned-enhancements)<br>
+[10. Glossary](#glossary)<br>
 
 
 --------------------------------------------------------------------------------------------------------------------
